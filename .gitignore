@@ -1,0 +1,23 @@
+# Environment and secrets
+.env
+.env.*
+!.env.sample
+!.env.example
+
+# Credentials
+*.pem
+*.key
+*.crt
+credentials*
+secrets.*
+
+# Runtime
+*.log
+*.bak
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
