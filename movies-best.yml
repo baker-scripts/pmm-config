@@ -60,7 +60,7 @@ collections:
     template: { name: Chart, num: 5 }
     imdb_list: https://www.imdb.com/search/title/?title_type=feature,documentary&groups=oscar_winner
     summary: Oscar Winning Movies
-    url_poster: https://github.com/bakerboy448/plex-meta-manger/raw/main/Posters/oscars.png
+    url_poster: https://github.com/baker-scripts/pmm-config/raw/main/Posters/oscars.png
     url_background: https://i.imgur.com/0Kao9gY.jpeg
   Best of 2022:
     template: { name: Best of, year: 2022, num: 1 }
