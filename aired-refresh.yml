@@ -1,0 +1,54 @@
+##############################################################################
+# Aired Recently - Metadata Refresh
+#
+# Hidden collections that refresh metadata for shows with recently aired
+# episodes. More frequent refresh for very recent episodes.
+##############################################################################
+
+collections:
+  # Frequent refresh for shows aired in last 3 days
+  Aired Last 3 Days (Refresh):
+    visible_home: false
+    visible_library: false
+    visible_shared: false
+
+    # Run 5x daily: 6am, 12pm, 3pm, 6pm, 10pm
+    schedule:
+      - hourly(6)
+      - hourly(12)
+      - hourly(15)
+      - hourly(18)
+      - hourly(22)
+
+    plex_search:
+      all:
+        episode_air_date: 3
+
+    item_refresh: true
+    item_refresh_delay: 2
+    sync_mode: sync
+    collection_order: alpha
+
+    summary: "Internal - refresh metadata for shows with episodes aired in last 3 days."
+
+  # Less frequent refresh for shows aired in last week
+  Aired Last Week (Refresh):
+    visible_home: false
+    visible_library: false
+    visible_shared: false
+
+    # Run 2x daily: 6am, 6pm
+    schedule:
+      - hourly(6)
+      - hourly(18)
+
+    plex_search:
+      all:
+        episode_air_date: 7
+
+    item_refresh: true
+    item_refresh_delay: 2
+    sync_mode: sync
+    collection_order: alpha
+
+    summary: "Internal - refresh metadata for shows with episodes aired in last 7 days."

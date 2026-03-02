@@ -1,0 +1,25 @@
+##############################################################################
+# Unmatched Items - Metadata Refresh
+#
+# Hidden collection that refreshes metadata for items Plex couldn't match
+# to a metadata source (TMDB/TVDB). Triggers Plex to retry matching.
+##############################################################################
+
+collections:
+  Unmatched Items (Refresh):
+    visible_home: false
+    visible_library: false
+    visible_shared: false
+
+    schedule: daily
+
+    plex_search:
+      all:
+        unmatched: true
+
+    item_refresh: true
+    item_refresh_delay: 2
+    sync_mode: sync
+    collection_order: alpha
+
+    summary: "Internal - refresh metadata for unmatched items to retry agent matching."

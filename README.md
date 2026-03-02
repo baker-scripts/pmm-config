@@ -15,6 +15,8 @@ Kometa (formerly Plex Meta Manager) configuration files for automated Plex libra
 - `tv.yml` — TV show collections
 - `tv-meta.yml` — TV show metadata configs
 - `tv-networks.yml` — TV network collections
+- `aired-refresh.yml` — Hidden collections for recently-aired metadata refresh
+- `unmatched-refresh.yml` — Hidden collection to retry matching unmatched items
 - `video-overlays.yml` — Video overlay definitions
 - `Overlays/` — Custom overlay images
 - `Posters/` — Custom collection posters
