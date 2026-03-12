@@ -25,6 +25,16 @@ Kometa (formerly Plex Meta Manager) configuration files for automated Plex libra
 
 These configs are designed for use with [Kometa](https://github.com/Kometa-Team/Kometa). Point your Kometa config to this directory or copy individual files as needed.
 
+## Contributors
+
+<a href="https://github.com/baker-scripts/pmm-config/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=baker-scripts/pmm-config" alt="Contributors" />
+</a>
+
+## Disclaimer
+
+These configs are provided as-is with no warranty. Always test with a Kometa dry run before applying to your library. The authors are not responsible for any unintended changes to your Plex library. This project is not affiliated with or endorsed by Kometa or Plex.
+
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+[MIT](LICENSE)

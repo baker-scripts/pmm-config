@@ -1,0 +1,72 @@
+name: Bug Report
+description: Report a problem with a Kometa config
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Fill out all required fields.** Incomplete reports will be closed.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Collection not building
+        - Overlay not applying
+        - Metadata mismatch
+        - YAML syntax error
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: config-file
+    attributes:
+      label: Config file
+      description: Which .yml file is affected?
+      placeholder: "movies-collections.yml"
+    validations:
+      required: true
+  - type: input
+    id: kometa-version
+    attributes:
+      label: Kometa version
+      placeholder: "2.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: kometa-branch
+    attributes:
+      label: Kometa branch
+      options:
+        - master
+        - develop
+        - nightly
+    validations:
+      required: true
+  - type: input
+    id: plex-version
+    attributes:
+      label: Plex version
+      placeholder: "1.41.3.9314"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Kometa log output
+      description: Relevant log output. Redact any API keys or tokens.
+      render: text
+    validations:
+      required: true
