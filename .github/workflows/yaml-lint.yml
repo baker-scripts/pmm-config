@@ -4,14 +4,15 @@ name: Yaml Lint
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
     - uses: actions/checkout@v6
     - name: yamllint version
