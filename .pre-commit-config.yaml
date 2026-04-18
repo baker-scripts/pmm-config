@@ -1,22 +1,32 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v6.0.0
+    rev: v5.0.0
     hooks:
-      - id: trailing-whitespace
-        name: trim trailing whitespace
-      - id: end-of-file-fixer
-        name: fix end of files
       - id: check-yaml
         name: check yaml
-      - id: check-added-large-files
-        name: check for added large files
+      - id: check-json
+        name: check json
+        files: \.json$
       - id: check-merge-conflict
         name: check for merge conflicts
+      - id: end-of-file-fixer
+        name: fix end of files
+      - id: trailing-whitespace
+        name: trim trailing whitespace
+      - id: no-commit-to-branch
+        args: ['--branch', 'master']
+      - id: check-added-large-files
+        name: check for added large files
       - id: detect-private-key
         name: detect private key
       - id: mixed-line-ending
         name: mixed line ending
         args: ['--fix=lf']
+
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.7
+    hooks:
+      - id: actionlint
 
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.5.0
@@ -24,3 +34,9 @@ repos:
       - id: detect-secrets
         name: detect secrets
         args: ['--baseline', '.secrets.baseline']
+
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.35.1
+    hooks:
+      - id: yamllint
+        args: [--config-file, .yamllint.yml]
