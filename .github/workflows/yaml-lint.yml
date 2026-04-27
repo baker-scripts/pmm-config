@@ -14,14 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-    - uses: actions/checkout@v6
-    - name: yamllint version
-      run: |
-        yamllint --version
-    - name: yamllint run
-      run: |
-        for f in `find . -maxdepth 1 -type f -name "*.yml"`
-        do
-          echo "$f"
-          yamllint "$f" --format github
-        done
+      - uses: actions/checkout@v6
+      - name: yamllint version
+        run: |
+          yamllint --version
+      - name: yamllint run
+        run: |
+          shopt -s nullglob
+          for f in ./*.yml; do
+            echo "$f"
+            yamllint "$f" --format github
+          done
