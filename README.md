@@ -1,5 +1,7 @@
 # pmm-config
 
+[![pre-commit](https://github.com/baker-scripts/pmm-config/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/baker-scripts/pmm-config/actions/workflows/pre-commit.yml)
+
 Kometa (formerly Plex Meta Manager) configuration files for automated Plex library management.
 
 ## Structure
@@ -24,6 +26,10 @@ Kometa (formerly Plex Meta Manager) configuration files for automated Plex libra
 ## Usage
 
 These configs are designed for use with [Kometa](https://github.com/Kometa-Team/Kometa). Point your Kometa config to this directory or copy individual files as needed.
+
+## Contributing
+
+Issues and pull requests welcome. See the [contributing guidelines](https://github.com/baker-scripts/.github/blob/main/CONTRIBUTING.md); [open an issue](https://github.com/baker-scripts/pmm-config/issues) to discuss larger changes.
 
 ## Contributors
 
