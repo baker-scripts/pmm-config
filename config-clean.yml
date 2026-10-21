@@ -206,24 +206,24 @@ radarr: # Can be individually specified per library as well
   url: http://radarr:7878/radarr
   add_missing: false
   upgrade_existing: false
-  sonarr: # Can be individually specified per library as well
-    add_existing: true
-    cutoff_search: false
-    monitor: none
-    plex_path:
-    quality_profile: HD - Low
-    root_folder_path: /mnt/data/media/tv
-    search: false
-    season_folder: true
-    series_type: standard
-    sonarr_path:
-    tag: pmm
-    token: <<SECRET_SONARR>>
-    url: http://sonarr:8989/# sonarr
-    add_missing: false
-    upgrade_existing: false
   ignore_cache: false
   monitor_existing: false
+sonarr: # Can be individually specified per library as well
+  add_existing: true
+  cutoff_search: false
+  monitor: none
+  plex_path:
+  quality_profile: HD - Low
+  root_folder_path: /mnt/data/media/tv
+  search: false
+  season_folder: true
+  series_type: standard
+  sonarr_path:
+  tag: pmm
+  token: <<SECRET_SONARR>>
+  url: http://sonarr:8989/sonarr
+  add_missing: false
+  upgrade_existing: false
 trakt:
   client_id: <<SECRET_TRAKT_ID>>
   client_secret: <<SECRET_TRAKT_SECRET>>
